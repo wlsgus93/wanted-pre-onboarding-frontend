@@ -4,7 +4,7 @@
 ### 프로젝트의 실행 방법
 1. git clone
 2. 해당 프로젝트 경로에서
-   ```npm install```
+   ```npm install```&
    ```npm start```
 ### 데모 영상
 배포사이트로 대체
