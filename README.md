@@ -12,7 +12,30 @@
 ###### 참고사항
 1. UI상의 로그아웃버튼: 구현 사항의 리다이렉트 기능을 확인하기 위한 단순 localstorage내의 토큰을 지우는 용도이며,
    자체적인 페이지 이동 기능은 전혀없다. 
-### 4. 기능 구현 설명
+### 4. 디렉토리 구조
+```
+├─node_modules
+├─public
+└─src
+│  ├─components
+│  │  └─detail.js
+│  ├─pages
+│  │  └─home.js
+│  │  ├─signin.js
+│  │  ├─signup.js
+│  │  ├─todo.js
+│  └─shared
+│  │  └─Router.js
+│  ├─App.js
+│  ├─App.css
+│  ├─index.css
+│  └─index.html
+├─.gitignore
+├─package.json
+├─package-lock.json
+└─README.md
+```
+### 5. 기능 구현 설명
 ### :: 1.로그인/회원가입
 #### development 1
 - 이메일 및 비밀번호 유효성 검사기능
@@ -254,3 +277,12 @@ const [todolist,setTodolist]=React.useState([]);
   1. 기존의 todo list를 map함수를 이용해 해당 to do object의 내용 변경
   2. 버튼 클릭후 수정 상태 반영
   - 취소버튼 : [수정버튼 기능과 동일](#development-6)
+### 6. 추후 평가
+- 구현 범위가 적고, 기능 구현만 고려하여 클린코드 X
+ - 코드 리팩토링 필요
+   1. 각각의 스크립트에서 같은 변수 재선언 많음
+   2. API를 모듈화 하지 않아 코드 가독성 떨어짐 
+   3. 각각의 스크립트에서 같은 기능의 함수 재선언 많음 (유지보수)
+   4. 쓸 데 없는 주석이 많음
+ - useState의 사용으로 인해 렌더링 횟수 많음=> useRef 고려
+ - axios사용으로 api 단순화 및 예외처리 쉽게 변경 고려(작성된 API는 Fetch로 구현)
