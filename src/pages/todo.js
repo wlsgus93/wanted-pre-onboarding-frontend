@@ -18,7 +18,6 @@ const Todo = () =>{
 
     useEffect(() => {
         idRef.current.focus();
-        // checkToken();
         if(!token){
             navigate('/signin')
         }
@@ -56,9 +55,7 @@ const Todo = () =>{
                 setTodolist([...todolist,result]);
                 setTodo('')
             })
-
-        }
-        
+        } 
       }
       const Logout=()=>{
         localStorage.removeItem('access_token');

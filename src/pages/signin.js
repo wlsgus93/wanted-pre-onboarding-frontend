@@ -8,7 +8,9 @@ const Signin = () =>{
     const [id, setId]= React.useState('');
     const [pwd,setPwd]= React.useState('');
     const [warning,setWarning]=React.useState(false);
+    
     const regExp=/@/g; /*Assignment 1 */
+    
     const navigate = useNavigate();
     const url = "https://www.pre-onboarding-selection-task.shop";
     const idRef = useRef("");
@@ -22,7 +24,6 @@ const Signin = () =>{
             console.log('토큰있음')
             navigate("/todo");  /*Assignment 4*/
         }
-            // localStorage.setItem("token", result.access_token);}
       }
 
 

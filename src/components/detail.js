@@ -59,9 +59,7 @@ const Detail = (props) =>{
                 props.setTodolist([...temp])
                 setIsUpdate(!isUpdate)
             })
-
         }
-        
     }
     const onDelete=()=>{
         /*Assignment 9*/
